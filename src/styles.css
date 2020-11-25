@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --clr-dark: #2a2a2e;
+  --clr-clear: #f2efe9;
+  --clr-accent: #fe4c4c;
+  --clr-back: black;
+  --clr-white: white;
+  --clr-grey: #acacac;
+}
+html {
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  background-color: var(--clr-dark);
+}

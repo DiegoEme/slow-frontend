@@ -1,0 +1,106 @@
+:root {
+  --clr-dark: #2a2a2e;
+  --clr-clear: #f2efe9;
+  --clr-accent: #fe4c4c;
+  --clr-back: black;
+  --clr-white: white;
+  --clr-grey: #acacac;
+}
+html {
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  background-color: var(--clr-dark);
+}
+
+.title {
+  color: var(--clr-accent);
+  /* font-family: "Comfortaa", cursive; */
+  font-family: "Kufam", cursive;
+  font-size: 10em;
+  margin-top: 1em;
+}
+
+.subtitle {
+  color: var(--clr-clear);
+  font-family: "Comfortaa", cursive;
+  font-size: 2.5em;
+  margin-top: 1em;
+}
+
+.navbar {
+  background-color: var(--clr-dark);
+}
+
+.navbar-brand {
+  color: var(--clr-accent);
+}
+
+.navbar .collapse .navbar-nav .nav-item .nav-link {
+  color: var(--clr-clear);
+}
+
+.navbar .collapse .navbar-nav .nav-item .nav-link:hover {
+  color: var(--clr-grey);
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 4em;
+    margin-top: 3em;
+  }
+  .subtitle {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 5em;
+    margin-top: 2.2em;
+  }
+  .subtitle {
+    font-size: 2em;
+  }
+}
+
+.modal-card {
+  height: 120px;
+  width: 90%;
+  background-color: var(--clr-clear);
+  font-size: 2em;
+  margin: auto;
+  padding: 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--clr-dark);
+  box-shadow: 10px 10px 19px -14px rgba(0, 0, 0, 0.63);
+}
+
+.modal-card:hover {
+  transform: scale(1.05);
+  transition-duration: 1s;
+}
+
+a:link {
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: var(--clr-dark);
+  text-decoration: none;
+}
