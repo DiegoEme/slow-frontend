@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CatalogoService } from '../../service/catalogo.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-listar',
@@ -7,7 +8,7 @@ import { CatalogoService } from '../../service/catalogo.service';
   styleUrls: ['./listar.component.css'],
 })
 export class ListarComponent implements OnInit {
-  constructor(private catalogo: CatalogoService) {}
+  constructor(private catalogo: CatalogoService, private router: Router) {}
 
   lista = [];
 
@@ -20,6 +21,9 @@ export class ListarComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+  addPrenda(){
+    this.router.navigate(['crearPrendas'])
   }
 
   eliminar(eliminarPrenda) {

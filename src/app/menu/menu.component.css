@@ -42,42 +42,7 @@ a .navbar-brand {
   color: var(--clr-grey);
 }
 
-@media screen and (max-width: 480px) {
-  .title {
-    font-size: 4em;
-    margin-top: 1.5em;
-  }
-  .subtitle {
-    font-size: 2em;
-  }
-}
-@media screen and (max-width: 768px) {
-  .title {
-    font-size: 5em;
-    margin-top: 0.5em;
-  }
-  .subtitle {
-    font-size: 2em;
-  }
-}
 
-.modal-card {
-  height: 120px;
-  width: 90%;
-  background-color: var(--clr-clear);
-  font-size: 2em;
-  margin: auto;
-  padding: 1em;
-  border-radius: 5px;
-  text-decoration: none;
-  color: var(--clr-dark);
-  box-shadow: 10px 10px 19px -14px rgba(0, 0, 0, 0.63);
-}
-
-.modal-card:hover {
-  transform: scale(1.05);
-  transition-duration: 1s;
-}
 
 a:link {
   color: var(--clr-dark);
@@ -110,4 +75,8 @@ a:active {
 
 .icon:hover {
   cursor: pointer;
+}
+
+#add {
+  visibility: hidden;
 }

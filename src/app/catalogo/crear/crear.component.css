@@ -17,6 +17,7 @@ body {
 }
 
 .btn-primary {
+  margin-top: 1em;
   background-color: var(--clr-accent);
   color: var(--clr-clear);
   border: none;

@@ -15,7 +15,11 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a *ngIf="auth.loginOn()" class="nav-link" routerLink="crearPrendas"
+        <a
+          id="add"
+          *ngIf="auth.loginOn()"
+          class="nav-link"
+          routerLink="crearPrendas"
           >Agregar Prenda</a
         >
       </li>
