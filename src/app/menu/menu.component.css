@@ -101,3 +101,13 @@ a:active {
   color: var(--clr-dark);
   text-decoration: none;
 }
+
+.icon {
+  position: relative;
+  top: 6px;
+  margin-left: 5px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}

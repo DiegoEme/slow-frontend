@@ -14,6 +14,8 @@
       ></textarea>
     </mat-form-field>
 
-    <button (click)="agregar()" class="btn btn-primary">Agregar Prenda</button>
+    <input type="file" (change)="subirArchivo($event)" />
+
+    <button (click)="crearImg()" class="btn btn-primary">Agregar Prenda</button>
   </div>
 </div>

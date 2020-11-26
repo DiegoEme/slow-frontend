@@ -15,16 +15,42 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" routerLink="crearPrendas">Agregar Prenda</a>
+        <a *ngIf="auth.loginOn()" class="nav-link" routerLink="crearPrendas"
+          >Agregar Prenda</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="listarPrendas">Ver Catálogo</a>
+        <a *ngIf="auth.loginOn()" class="nav-link" routerLink="listarPrendas"
+          >Ver Catálogo</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="login">Ingresar</a>
+        <a *ngIf="!auth.loginOn()" class="nav-link" routerLink="login"
+          >Ingresar</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="registro">Registrarse</a>
+        <a *ngIf="!auth.loginOn()" class="nav-link" routerLink="registro"
+          >Registrarse</a
+        >
+      </li>
+      <li class="nav-item">
+        <mat-icon
+          class="icon"
+          color="accent"
+          *ngIf="auth.loginOn()"
+          aria-hidden="false"
+          aria-label="login"
+          (click)="auth.cerrarSesion()"
+          >login</mat-icon
+        >
+        <!-- <a
+          *ngIf="auth.loginOn()"
+          class="nav-link"
+          mat-button
+          (click)="auth.cerrarSesion()"
+          >Cerrar sesión</a
+        > -->
       </li>
     </ul>
     <!-- <ul class="navbar-nav"></ul> -->

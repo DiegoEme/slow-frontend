@@ -10,6 +10,7 @@ export class CatalogoService {
 
   private listaUrl = 'http://localhost:3000/api/catalogo/lista';
   private crearUrl = 'http://localhost:3000/api/catalogo';
+  private imgUrl =  'http://localhost:3000/api/catalogo/cargarArchivo';
 
   listaCatalogo(){
     return this.http.get<any>(this.listaUrl);
@@ -26,5 +27,9 @@ export class CatalogoService {
     const _id = catalogo._id;
     const url = `${this.crearUrl}/${_id}`;
     return this.http.delete<any>(url);
+  }
+
+  crearPrendaImg(catalogo){
+    return this.http.post<any>(this.imgUrl, catalogo);
   }
 }

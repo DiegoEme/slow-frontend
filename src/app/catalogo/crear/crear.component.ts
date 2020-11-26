@@ -17,6 +17,27 @@ export class CrearComponent implements OnInit {
     descripcion: '',
   }
 
+  elegirImg: File = null;
+
+  subirArchivo(event){
+    this.elegirImg = <File>event.target.files[0];
+  }
+
+  crearImg(){
+    const miFile = new FormData();
+    miFile.append('nombre', this.agregarPrenda.nombre);
+    miFile.append('descripcion', this.agregarPrenda.descripcion);
+    miFile.append('sticker', this.elegirImg, this.elegirImg.name);
+    this.catalogo.crearPrendaImg(miFile).subscribe(
+      (res) => {
+        this.router.navigate(['/listarPrendas']);
+      },
+      (err) => {
+        console.log(err);
+      }
+    )
+  }
+
   ngOnInit(): void {
   }
 
