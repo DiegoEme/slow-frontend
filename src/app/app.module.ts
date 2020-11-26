@@ -19,6 +19,7 @@ import { AuthService } from './service/auth.service';
 import { MatCardModule } from '@angular/material/card';
 import { AuthGuard } from './guard/auth.guard';
 import { TokenInterceptorService } from './service/token-interceptor.service';
+import { CatalogoService } from './service/catalogo.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,10 @@ import { TokenInterceptorService } from './service/token-interceptor.service';
     MatCardModule,
     ReactiveFormsModule,
   ],
-  providers: [AuthService, AuthGuard, 
+  providers: [
+    AuthService,
+    AuthGuard, 
+    CatalogoService,
   {
     provide: HTTP_INTERCEPTORS, 
     useClass: TokenInterceptorService,

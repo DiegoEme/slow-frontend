@@ -1,0 +1,73 @@
+:root {
+  --clr-dark: #2a2a2e;
+  --clr-clear: #f2efe9;
+  --clr-accent: #fe4c4c;
+  --clr-back: black;
+  --clr-white: white;
+  --clr-grey: #acacac;
+}
+
+/**** TITULO MENU *****/
+
+.titulo {
+  color: var(--clr-clear);
+}
+
+/**** BOTON AGREGAR ****/
+.btn {
+  background-color: var(--clr-accent);
+  color: var(--clr-clear);
+  border: none;
+}
+.btn:hover {
+  background-color: red;
+}
+.btn {
+  background-color: var(--clr-accent);
+  color: var(--clr-clear);
+  border: none;
+}
+.btn:hover {
+  background-color: red;
+}
+
+/**** TRAJETA MENÚ ****/
+
+.descripcion {
+  color: var(--clr-clear);
+}
+.fa-trash-alt {
+  color: var(--clr-clear);
+  font-size: 2em;
+}
+
+.card > .card-body {
+  padding: 0.5em 0.1em;
+}
+
+.nombre-plato,
+.descripcion {
+  color: var(--clr-dark);
+}
+
+.fa-trash-alt {
+  color: var(--clr-accent);
+  transition: transform 330ms ease-out;
+}
+
+.fa-trash-alt:hover {
+  color: red;
+  transform: translateY(-5px);
+  cursor: pointer;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.donar {
+  font-size: 1.3em;
+}
+
+/* @media screen and (max-width: 768px) {
+      .imagen {
+        display: none !important;
+      }
+    } */

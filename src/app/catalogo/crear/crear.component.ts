@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router'
+import { CatalogoService } from '../../service/catalogo.service';
 
 @Component({
   selector: 'app-crear',
@@ -9,15 +10,24 @@ import { Router } from '@angular/router'
 })
 export class CrearComponent implements OnInit {
 
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(private auth: AuthService, private router: Router, private catalogo: CatalogoService) { }
 
   agregarPrenda = {
     nombre: '',
-    descripcion: ''
+    descripcion: '',
   }
 
   ngOnInit(): void {
   }
 
-  agregar(){}
+  agregar(){
+    this.catalogo.crearCatalogo(this.agregarPrenda).subscribe(
+      (res) => {
+        console.log(res);
+      },
+      (err) => {
+        console.log(err);
+      }
+    )
+  }
 }

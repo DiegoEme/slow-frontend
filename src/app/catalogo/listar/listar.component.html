@@ -1,1 +1,118 @@
-<p>listar works!</p>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-3">
+      <h1 class="titulo">Mi Catálogo</h1>
+    </div>
+    <div class="col-3"></div>
+    <div class="col-3"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-3">
+      <a class="btn">Agregar</a>
+    </div>
+    <div class="col-3"></div>
+    <div class="col-3"></div>
+  </div>
+</div>
+
+<div class="container" multi="true" *ngIf="lista.length">
+  <!-- Tarjeta 0-->
+  <div class="row mt-3" *ngFor="let lista of lista">
+    <div class="col-1 col-sm-1 col-md-1 col-lg-3"></div>
+    <div class="card col-sm-12 col-md-12 col-lg-6">
+      <div class="card-body d-flex">
+        <div
+          class="col-1 col-sm-1 col-md-1 col-lg-2 mr-4 d-flex align-self-center"
+        >
+          <img
+            class="d-none d-lg-block"
+            src="../img/pantalon.jpg"
+            width="130%"
+            alt=""
+          />
+        </div>
+        <div class="col-9 col-lg-8 descripcion">
+          <h4 class="nombre-plato">
+            <strong>{{ lista.nombre }}</strong>
+          </h4>
+          <p class="descripcion text-justify">
+            {{ lista.descripcion }}
+          </p>
+
+          <a class="donar" href=""
+            ><span class="badge badge-pill badge-warning">Donar</span></a
+          >
+        </div>
+        <div class="col-1 d-flex align-self-center">
+          <i (click)="eliminar(lista)" class="fas fa-trash-alt"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  
+  <div class="row mt-3">
+    <div class="col-1 col-sm-1 col-md-1 col-lg-3"></div>
+    <div class="card col-sm-12 col-md-12 col-lg-6">
+      <div class="card-body d-flex">
+        <div
+          class="col-1 col-sm-1 col-md-1 col-lg-2 mr-4 d-flex align-self-center"
+        >
+          <img
+            class="d-none d-lg-block"
+            src="../img/polo.jpg"
+            width="130%"
+            alt=""
+          />
+        </div>
+        <div class="col-9 col-lg-8 descripcion">
+          <h4 class="nombre-plato"><strong>Camisa Tipo Polo</strong></h4>
+          <p class="descripcion text-justify">
+            Camisa tipo polo gris para hombre. Talla M. Como nueva
+          </p>
+
+          <a class="donar" href=""
+            ><span class="badge badge-pill badge-warning">Donar</span></a
+          >
+        </div>
+        <div class="col-1 d-flex align-self-center">
+          <i class="fas fa-trash-alt"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-3">
+    <div class="col-1 col-sm-1 col-md-1 col-lg-3"></div>
+    <div class="card col-sm-12 col-md-12 col-lg-6">
+      <div class="card-body d-flex">
+        <div
+          class="col-1 col-sm-1 col-md-1 col-lg-2 mr-4 d-flex align-self-center"
+        >
+          <img
+            class="d-none d-lg-block"
+            src="../img/sombrero.jpg"
+            width="130%"
+            alt=""
+          />
+        </div>
+        <div class="col-9 col-lg-8 descripcion">
+          <h4 class="nombre-plato"><strong>Sombrero Vueltiao</strong></h4>
+          <p class="descripcion text-justify">
+            Sombrero Vueltiao usado por el cacique de la junta ¡Diomedízate!
+          </p>
+
+          <a class="donar" href=""
+            ><span class="badge badge-pill badge-warning">Donar</span></a
+          >
+        </div>
+        <div class="col-1 d-flex align-self-center">
+          <i class="fas fa-trash-alt"></i>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
