@@ -19,10 +19,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  nuevaCuenta(){
+    this.router.navigate(['/registro'])
+  }
+
   login(){
     this.auth. loginUsuario(this.loguear).subscribe(
       (res) => {
         console.log(res);
+        localStorage.setItem('token', res.jwtToken);
+        this.router.navigate(['/listarPrendas']);
       },
       (err) => {
         console.log(err);

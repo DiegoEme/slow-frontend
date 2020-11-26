@@ -1,0 +1,70 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+:root {
+  --clr-dark: #2a2a2e;
+  --clr-clear: #f2efe9;
+  --clr-accent: #fe4c4c;
+  --clr-back: black;
+  --clr-white: white;
+  --clr-grey: #acacac;
+}
+html {
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  background-color: var(--clr-dark);
+}
+
+.btn-primary {
+  background-color: var(--clr-accent);
+  color: var(--clr-clear);
+  border: none;
+}
+.btn-primary:hover {
+  background-color: red;
+}
+
+/***********/
+
+.titulo {
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-clear);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 3em;
+}
+
+.col {
+  background-color: var(--clr-accent);
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: var(--clr-clear) !important;
+}
+::ng-deep .mat-form-field-label {
+  /*change color of label*/
+  color: var(--clr-clear) !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: var(--clr-clear) !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: var(--clr-clear) !important;
+}

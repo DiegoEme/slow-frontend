@@ -1,1 +1,19 @@
-<p>crear works!</p>
+<div class="form">
+  <div class="container">
+    <h1 class="titulo">Agregar Prenda</h1>
+    <hr />
+    <mat-form-field color="accent">
+      <input [(ngModel)]="agregarPrenda.nombre" matInput placeholder="Nombre" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea
+        [(ngModel)]="agregarPrenda.descripcion"
+        matInput
+        placeholder="Descripción"
+      ></textarea>
+    </mat-form-field>
+
+    <button (click)="(agregar)" class="btn btn-primary">Agregar Prenda</button>
+  </div>
+</div>

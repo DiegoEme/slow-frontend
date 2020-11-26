@@ -10,14 +10,15 @@ import { HomeComponent } from './home/home.component';
 import { CrearComponent } from './catalogo/crear/crear.component';
 import { ListarComponent } from './catalogo/listar/listar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './service/auth.service';
-import {MatCardModule} from '@angular/material/card';
-
+import { MatCardModule } from '@angular/material/card';
+import { AuthGuard } from './guard/auth.guard';
+import { TokenInterceptorService } from './service/token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import {MatCardModule} from '@angular/material/card';
     MenuComponent,
     HomeComponent,
     CrearComponent,
-    ListarComponent
+    ListarComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +39,15 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     FormsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
   ],
-  providers: [AuthService],
-  bootstrap: [AppComponent]
+  providers: [AuthService, AuthGuard, 
+  {
+    provide: HTTP_INTERCEPTORS, 
+    useClass: TokenInterceptorService,
+    multi: true,
+  }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

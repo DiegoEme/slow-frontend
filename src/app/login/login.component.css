@@ -70,4 +70,10 @@ body {
 }
 .nuevaCuenta {
   margin: auto;
+  margin-top: 1em;
+  font-size: 14px;
+}
+
+.nuevaCuenta:hover {
+  cursor: pointer;
 }

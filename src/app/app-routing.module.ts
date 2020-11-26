@@ -5,6 +5,7 @@ import { ListarComponent } from './catalogo/listar/listar.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
 {
@@ -14,11 +15,13 @@ const routes: Routes = [
 },
 {
   path: 'listarPrendas',
-  component: ListarComponent
+  component: ListarComponent,
+  canActivate: [AuthGuard]
 },
 {
   path: 'crearPrendas',
-  component: CrearComponent
+  component: CrearComponent,
+  canActivate: [AuthGuard]
 },
 {
   path: 'login',

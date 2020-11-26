@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-registro',
@@ -25,6 +26,10 @@ export class RegistroComponent implements OnInit {
     this.auth.registroUsuario(this.registrarUsuario).subscribe(
       (res) => {
         console.log(res);
+        
+          this.router.navigate(['/login']);
+        
+        
       },
       (err) => {
         console.log(err);

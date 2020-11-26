@@ -50,6 +50,10 @@ body {
   background-color: var(--clr-accent);
 }
 
+mat-hint {
+  color: var(--clr-clear) !important;
+}
+
 ::ng-deep .mat-focused .mat-form-field-label {
   /*change color of label*/
   color: var(--clr-clear) !important;
