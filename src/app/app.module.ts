@@ -20,6 +20,10 @@ import { MatCardModule } from '@angular/material/card';
 import { AuthGuard } from './guard/auth.guard';
 import { TokenInterceptorService } from './service/token-interceptor.service';
 import { CatalogoService } from './service/catalogo.service';
+import { VerComponent } from './ropa/ver/ver.component';
+import { RopaService } from './service/ropa.service';
+import { SimpleNotificationsModule } from 'angular2-notifications';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +34,7 @@ import { CatalogoService } from './service/catalogo.service';
     HomeComponent,
     CrearComponent,
     ListarComponent,
+    VerComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,11 +47,13 @@ import { CatalogoService } from './service/catalogo.service';
     HttpClientModule,
     MatCardModule,
     ReactiveFormsModule,
+    SimpleNotificationsModule.forRoot(),
   ],
   providers: [
     AuthService,
     AuthGuard, 
     CatalogoService,
+    RopaService,
   {
     provide: HTTP_INTERCEPTORS, 
     useClass: TokenInterceptorService,

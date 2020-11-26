@@ -1,0 +1,83 @@
+:root {
+  --clr-dark: #2a2a2e;
+  --clr-clear: #f2efe9;
+  --clr-accent: #fe4c4c;
+  --clr-back: black;
+  --clr-white: white;
+  --clr-grey: #acacac;
+}
+html {
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  background-color: var(--clr-dark);
+}
+
+a:link {
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+/****BOOTSTRAP CARDS ****/
+
+.container {
+  display: flex;
+  margin-top: 2em;
+  flex-wrap: wrap;
+}
+
+.card .card-body .card-title {
+  color: var(--clr-clear);
+}
+.card-img-top {
+  width: 90%;
+  height: 225px;
+}
+
+.view {
+  background-color: #343a40;
+  padding: 10px;
+  margin: 20px 40px;
+}
+
+.card {
+  width: 340px;
+  padding: 0px;
+  margin-left: 2%;
+}
+
+p {
+  font-size: 16px;
+}
+.card-footer {
+  background-color: var(--clr-accent);
+  font-weight: 700;
+  height: 50px;
+}
+.card-footer:hover {
+  cursor: pointer;
+}
+
+.price {
+  color: var(--clr-light);
+  font-weight: 600;
+}

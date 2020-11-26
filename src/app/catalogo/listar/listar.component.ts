@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CatalogoService } from '../../service/catalogo.service';
 import { Router } from '@angular/router'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-listar',
@@ -8,8 +9,11 @@ import { Router } from '@angular/router'
   styleUrls: ['./listar.component.css'],
 })
 export class ListarComponent implements OnInit {
-  constructor(private catalogo: CatalogoService, private router: Router) {}
+  constructor(private catalogo: CatalogoService, 
+    private router: Router,
+    ) {}
 
+    
   lista = [];
 
   ngOnInit(): void {
@@ -22,10 +26,21 @@ export class ListarComponent implements OnInit {
       }
     );
   }
+
+  showModal(){
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Prenda agregada',
+      showConfirmButton: false,
+      timer: 1000
+    })
+  }
   addPrenda(){
     this.router.navigate(['crearPrendas'])
   }
 
+  
   eliminar(eliminarPrenda) {
     this.catalogo.eliminarCatalogo(eliminarPrenda).subscribe(
       (res) => {

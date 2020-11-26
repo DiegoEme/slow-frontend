@@ -42,8 +42,6 @@ a .navbar-brand {
   color: var(--clr-grey);
 }
 
-
-
 a:link {
   color: var(--clr-dark);
   text-decoration: none;
@@ -70,7 +68,7 @@ a:active {
 .icon {
   position: relative;
   top: 6px;
-  margin-left: 5px;
+  margin-left: 25px;
 }
 
 .icon:hover {
