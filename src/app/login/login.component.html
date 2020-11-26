@@ -1,1 +1,20 @@
-<p>login works!</p>
+<div class="form">
+  <div class="container">
+    <h1 class="titulo">Iniciar sesión</h1>
+    <hr />
+    <mat-form-field>
+      <input [(ngModel)]="loguear.correo" matInput placeholder="Correo" />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="password"
+        [(ngModel)]="loguear.pass"
+        matInput
+        placeholder="Contraseña"
+      />
+    </mat-form-field>
+
+    <button (click)="login()" class="btn btn-primary">Iniciar sesión</button>
+    <p class="nuevaCuenta">Crear cuenta nueva</p>
+  </div>
+</div>
