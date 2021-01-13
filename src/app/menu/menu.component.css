@@ -67,7 +67,7 @@ a:active {
 
 .icon {
   position: relative;
-  top: 6px;
+  top: 8px;
   margin-left: 25px;
 }
 
@@ -77,4 +77,8 @@ a:active {
 
 #add {
   visibility: hidden;
+}
+
+.material-icons {
+  font-size: 20px;
 }

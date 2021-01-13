@@ -34,6 +34,12 @@
         >
       </li>
       <li class="nav-item">
+        <a *ngIf="auth.loginOn()" class="nav-link" routerLink="cart"
+          ><i class="material-icons">shopping_cart</i></a
+        >
+      </li>
+
+      <li class="nav-item">
         <a *ngIf="!auth.loginOn()" class="nav-link" routerLink="login"
           >Ingresar</a
         >
@@ -45,6 +51,9 @@
       </li>
       <li class="nav-item">
         <mat-icon
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Cerrar sesión"
           class="icon"
           color="accent"
           *ngIf="auth.loginOn()"

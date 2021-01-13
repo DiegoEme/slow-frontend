@@ -23,6 +23,7 @@ import { CatalogoService } from './service/catalogo.service';
 import { VerComponent } from './ropa/ver/ver.component';
 import { RopaService } from './service/ropa.service';
 import { SimpleNotificationsModule } from 'angular2-notifications';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
     CrearComponent,
     ListarComponent,
     VerComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { AuthGuard } from './guard/auth.guard';
 import { VerComponent } from './ropa/ver/ver.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
 {
@@ -35,6 +36,11 @@ const routes: Routes = [
 {
   path: 'verPrendas',
   component: VerComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path: 'cart',
+  component: CartComponent,
   canActivate: [AuthGuard]
 }
 
